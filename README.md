@@ -63,6 +63,7 @@ $$R_{\text{total}} = 0.97$$
 
 所以整体RTP的计算方式就是对 全期望公式 的直接应用：
 $$R_{\text{total}} = p_{\text{normal}} \cdot R_{\text{normal}} + p_{\text{free}} \cdot R_{\text{free}} + p_{\text{bonus}} \cdot R_{\text{bonus}}$$
+
 反推bonus计算结果：
 $$R_{\text{bonus}} = \frac{R_{\text{total}} - \left(p_{\text{normal}} \cdot R_{\text{normal}} + p_{\text{free}} \cdot R_{\text{free}}\right)}{p_{\text{bonus}}}$$
 
