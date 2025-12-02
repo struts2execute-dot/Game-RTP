@@ -501,3 +501,24 @@ func main() {
   总结：
 - 精准控制rtp，通过调节用户rtp即可控制用户返奖。
 - 精准控制模式概率分布和倍数概率分布，游戏体验接近原厂。
+
+---
+
+## 五 spin牌面展示
+通过前面的rtp引擎，每次spin，我们通过调用pickMultiplier函数，即可返回一个倍数。
+```text
+mult := pickMultiplier(multipliers[chosen], modeCDFs[chosen])
+```
+因此，为了适应spin逻辑，还应该建立模式/倍数和牌面之间的关系。如下：
+
+| 模式   | 倍数 | 牌面                                  |
+|--------|------|---------------------------------------|
+| normal | 0    | [reels-1,reels-2,reels-3,reels-4]     |
+| normal | 1    | [reels-1,reels-2,reels-3,reels-4]     |
+| normal | 1.5  | [reels-1,reels-2,reels-3,reels-4]     |
+| free   | 10   | [reels-1,reels-2,reels-3,reels-4]     |
+| free   | 15   | [reels-1,reels-2,reels-3,reels-4]     |
+| bonus  | .... | .....                                 |
+
+每一次spin，我们可以通过随机得到的 模式 + 倍数 得到一个牌面集合（数据存储为hash），然后以随机或者去重且随机的方式任选一个牌面作为返回数据。
+最后，根据用户bet的数值，修改实际中奖奖金，返回给前端即可。
