@@ -66,26 +66,27 @@ $$R_{\text{total}} = 0.97$$
 整体 RTP 公式：
 
 $$
-R_{\text{total}}
-= p_{\text{normal}} \cdot R_{\text{normal}}
-+ p_{\text{free}} \cdot R_{\text{free}}
-+ p_{\text{bonus}} \cdot R_{\text{bonus}}
+R_\mathrm{total}
+= p_\mathrm{normal} \cdot R_\mathrm{normal}
++ p_\mathrm{free} \cdot R_\mathrm{free}
++ p_\mathrm{bonus} \cdot R_\mathrm{bonus}
   $$
 
 反推 bonus 模式的 RTP：
 
 $$
-R_{\text{bonus}} =
-\frac{
-R_{\text{total}}
+R_\mathrm{bonus}
+= \frac{
+R_\mathrm{total}
 - \bigl(
-  p_{\text{normal}} \cdot R_{\text{normal}}
-    + p_{\text{free}} \cdot R_{\text{free}}
+  p_\mathrm{normal} \cdot R_\mathrm{normal}
+    + p_\mathrm{free} \cdot R_\mathrm{free}
       \bigr)
       }{
-      p_{\text{bonus}}
+      p_\mathrm{bonus}
       }
       $$
+
 
 代入数值得到：
 
