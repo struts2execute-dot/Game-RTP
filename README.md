@@ -61,32 +61,10 @@ $$R_{\text{total}} = 0.97$$
 - 加上进入 free 的概率 × free 的平均返还；
 - 加上进入 bonus 的概率 × bonus 的平均返还。
 
-所以整体 RTP 的计算方式就是对**全期望公式**的直接应用
-
-$$
-R_\mathrm{total}
-= p_\mathrm{normal} \cdot R_\mathrm{normal}
-+ p_\mathrm{free} \cdot R_\mathrm{free}
-+ p_\mathrm{bonus} \cdot R_\mathrm{bonus}
-$$
-
-
-
-反推 bonus 模式的 RTP：
-
-$$
-R_\mathrm{bonus}
-= \frac{
-R_\mathrm{total}
-- \bigl(
-  p_\mathrm{normal} \cdot R_\mathrm{normal}
-    + p_\mathrm{free} \cdot R_\mathrm{free}
-      \bigr)
-      }{
-      p_\mathrm{bonus}
-      }
-      $$
-
+所以整体RTP的计算方式就是对 全期望公式 的直接应用：
+$$R_{\text{total}} = p_{\text{normal}} \cdot R_{\text{normal}} + p_{\text{free}} \cdot R_{\text{free}} + p_{\text{bonus}} \cdot R_{\text{bonus}}$$
+反推bonus计算结果：
+$$R_{\text{bonus}} = \frac{R_{\text{total}} - \left(p_{\text{normal}} \cdot R_{\text{normal}} + p_{\text{free}} \cdot R_{\text{free}}\right)}{p_{\text{bonus}}}$$
 
 代入数值得到：
 
